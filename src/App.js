@@ -10,7 +10,6 @@ import {useSelector} from "react-redux";
 const ProtectedRoute = ({isAllowed, ...props}) => {
   return isAllowed ? <Route {...props} /> : <Redirect to="/"/>
 };
-
 const ProtectedSignRoute = ({isAllowed, ...props}) => {
   return isAllowed ? <Route {...props} /> : <Redirect to="/user"/>
 };
