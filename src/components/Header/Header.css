@@ -1,0 +1,37 @@
+.header {
+    background-color: #ffffffff;
+    padding: 10px 0;
+}
+
+.headerInner {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.logoIcon {
+    color: blue;
+}
+
+.logo {
+    color: black;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.userName {
+    margin: 0 10px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
