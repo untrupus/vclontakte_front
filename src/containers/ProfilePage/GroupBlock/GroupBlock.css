@@ -1,0 +1,26 @@
+.groupBlock {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+}
+
+.groupBlock h5 {
+    margin-top: 0;
+}
+
+.groupDescription {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+.groupAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}

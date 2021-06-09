@@ -1,0 +1,35 @@
+.photoBlock {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+    text-align: center;
+}
+
+.photoBlock p {
+    margin-top: 0;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.photoBlockImg {
+    height: 100px;
+    width: auto;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.photoLink {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.photoLink:hover {
+    color: cornflowerblue;
+}

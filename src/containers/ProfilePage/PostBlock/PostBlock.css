@@ -1,0 +1,66 @@
+.singlePost {
+    padding: 10px;
+    background-color: white;
+    margin-top: 15px;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+    position: relative;
+}
+
+.postHeader {
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.postAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.postHeaderTitle {
+    font-weight: bold;
+}
+
+.postDate {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+}
+
+.postImage {
+    width: 100%;
+    height: auto;
+}
+
+.postFooter {
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+}
+
+.postIcon {
+    margin-right: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.removeIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.removeIcon:hover {
+    color: red;
+}
+
+.editBlock {
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -4,6 +4,10 @@ import Header from "./components/Header/Header";
 import ProfilePage from "./containers/ProfilePage/ProfilePage";
 import Login from "./containers/Login/Login";
 import Register from "./containers/Register/Register";
+import EditProfile from "./containers/EditProfile/EditProfile";
+import FriendList from "./containers/FriendList/FriendList";
+import MusicPage from "./containers/MusicPage/MusicPage";
+import PhotoPage from "./containers/PhotoPage/PhotoPage";
 
 import {useSelector} from "react-redux";
 
@@ -36,6 +40,30 @@ function App() {
           path="/user"
           exact
           component={ProfilePage}
+          isAllowed={user}
+        />
+        <ProtectedRoute
+          path="/edit"
+          exact
+          component={EditProfile}
+          isAllowed={user}
+        />
+        <ProtectedRoute
+          path="/friends"
+          exact
+          component={FriendList}
+          isAllowed={user}
+        />
+        <ProtectedRoute
+          path="/photo"
+          exact
+          component={PhotoPage}
+          isAllowed={user}
+        />
+        <ProtectedRoute
+          path="/music"
+          exact
+          component={MusicPage}
           isAllowed={user}
         />
         <Route render={() => <h1>404</h1>}/>

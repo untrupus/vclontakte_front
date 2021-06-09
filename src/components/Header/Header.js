@@ -3,11 +3,12 @@ import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import {logoutUser} from "../../store/actions/userActions";
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import {api} from "../../constants";
 import "./Header.css";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const user = useSelector(state => state.user.user);
+  const user = useSelector(state => state.user.user?.user);
 
   const logout = () => {
     dispatch(logoutUser());
@@ -23,7 +24,8 @@ const Header = () => {
           </Link>
         </div>
         {user ? <div className="userInfo">
-          <p className="userName">{user.user.displayName}</p>
+          <img src={api + user.image} alt="avatar" className="headerAvatar"/>
+          <p className="userName">{user.firstName} {user.lastName}</p>
           <button
             type="button"
             onClick={logout}

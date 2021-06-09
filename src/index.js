@@ -10,7 +10,7 @@ import axios from "./axiosApi";
 
 axios.interceptors.request.use(config => {
   try {
-    config.headers['Authorization'] = store.getState().user.user.token;
+    config.headers['Authorization'] = store.getState().user.user.user.token;
   } catch(e) {
     // no token exists
   }

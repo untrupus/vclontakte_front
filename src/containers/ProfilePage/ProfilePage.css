@@ -1,0 +1,19 @@
+.profilePage {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.columnLeft {
+    width: 30%;
+    height: 90vh;
+    margin-top: 30px;
+}
+
+.columnRight {
+    width: 50%;
+    height: 90vh;
+    margin-top: 30px;
+}
+
