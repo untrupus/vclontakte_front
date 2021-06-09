@@ -6,16 +6,18 @@ const Register = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [displayName, setDisplayName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const register = () => {
-    if (email !== "" && password !== "" && displayName !== "") {
+    if (email !== "" && password !== "" && firstName !== "") {
       dispatch(registerUser({
-        email, password, displayName
+        email, password, firstName, lastName
       }));
-      setDisplayName("");
+      setFirstName("");
       setPassword("");
       setEmail("");
+      setLastName("");
     }
   };
 
@@ -39,15 +41,22 @@ const Register = () => {
       <input
         type="text"
         className="field"
-        placeholder="Display Name"
-        value={displayName}
-        onChange={(e) => setDisplayName(e.target.value)}
+        placeholder="First Name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+      />
+      <input
+        type="text"
+        className="field"
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
       />
       <button
         type="button"
         className="loginBtn"
         onClick={register}
-      >Login</button>
+      >Register</button>
     </div>
   );
 };

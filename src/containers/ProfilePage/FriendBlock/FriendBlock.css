@@ -1,0 +1,32 @@
+.friendBlock {
+    margin-top: 15px;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+}
+
+.friendBlock h5 {
+    margin-top: 0;
+}
+
+.friendBlockInner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.singleFriend {
+    width: 30%;
+    text-align: center;
+}
+
+.singleFriendAvatar {
+    width: 60px;
+    height: 60px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.singleFriendAvatar:hover {
+    border: 1px solid blue;
+}
