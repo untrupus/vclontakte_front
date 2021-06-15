@@ -4,7 +4,7 @@
 }
 
 .headerInner {
-    width: 1200px;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -34,4 +34,10 @@
 .userInfo {
     display: flex;
     align-items: center;
+}
+
+.headerAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }

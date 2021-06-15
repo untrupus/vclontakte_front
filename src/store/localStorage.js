@@ -1,4 +1,6 @@
-export const saveToLocalStorage = state => {
+/** Get and save user data to local storage */
+
+export const saveToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem("state", serializedState);

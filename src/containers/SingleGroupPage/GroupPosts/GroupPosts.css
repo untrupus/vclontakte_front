@@ -1,0 +1,48 @@
+.groupPosts {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.groupPostsHeader {
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+    padding: 10px 0;
+}
+
+.groupPostsInner {
+    margin-top: 10px;
+}
+
+.singleGroupPost {
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(50, 50, 50, 0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.groupPostText {
+    border-bottom: 1px solid gray;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.groupPostDate {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    text-decoration: underline;
+}
+
+.groupPostImg {
+    width: 100%;
+    height: auto;
+}
+
+.groupPostFooter {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: left;
+}

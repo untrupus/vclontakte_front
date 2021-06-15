@@ -1,0 +1,21 @@
+.sideBar {
+    width: 15%;
+    margin-top: 30px;
+}
+
+.sideBarLink {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.sideBarLink:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+.sideBarIcon {
+    margin: 0 10px -7px 0;
+    color: #0F02FF;
+}

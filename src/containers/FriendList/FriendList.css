@@ -1,0 +1,53 @@
+.friendList {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.friendListInner {
+    width: 80%;
+    background-color: white;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.friendsButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
+
+.friendsButton {
+    padding: 10px;
+    width: 40%;
+}
+
+.singleFriend {
+    display: flex;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+}
+
+.friendAvatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.friendsLink {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.friendsLink:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+

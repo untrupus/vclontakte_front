@@ -1,0 +1,69 @@
+.createGroup {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.createGroupPage {
+    margin-top: 30px;
+    width: 70%;
+    background-color: white;
+    padding: 100px;
+    text-align: center;
+}
+
+.createIcon {
+    width: 100px;
+    height: auto;
+}
+
+.createGroupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createGroupField {
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.buttonBlock {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    padding-top: 30px;
+}
+
+.createGroupBtn {
+    width: 40%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.addImage {
+    padding: 10px;
+    width: 100%;
+}
+
+.inputLabel {
+    display: block;
+    border: 1px solid gray;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.inputLabel:hover {
+    background-color: #e8e7e7;
+}
+
+.groupImagePreview {
+    height: 200px;
+    width: auto;
+    margin: 10px 0;
+}
