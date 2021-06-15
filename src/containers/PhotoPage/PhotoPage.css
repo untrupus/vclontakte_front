@@ -1,0 +1,13 @@
+.photoPage {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photoPageInner {
+    width: 80%;
+    background-color: white;
+    margin-top: 30px;
+}
+

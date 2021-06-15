@@ -11,8 +11,19 @@
     margin-top: 0;
 }
 
-.groupDescription {
+.linkToMyGroups {
+    color: black;
+    text-decoration: none;
+}
+
+.linkToMyGroups:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+.groupDescriptionProfile {
     display: flex;
+    align-items: center;
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
     margin-bottom: 10px;
@@ -23,4 +34,15 @@
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+.groupNameSorted {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.groupNameSorted:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
 }

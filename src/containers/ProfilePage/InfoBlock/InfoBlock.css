@@ -47,3 +47,28 @@
 .infoBottomItem p {
     margin: 0;
 }
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.editIcon {
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+}
+
+.description {
+    flex-grow: 1;
+}
+
+.statusForm {
+    padding-top: 10px;
+    display: flex;
+}
+
+.statusField {
+    flex-grow: 1;
+    padding: 10px;
+}

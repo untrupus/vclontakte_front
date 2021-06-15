@@ -1,20 +1,16 @@
-import React from 'react';
-import {useSelector} from "react-redux";
+import React from "react";
 import SinglePost from "./SinglePost";
+import { sortByDate } from "../../../helpers";
 import "./PostBlock.css";
 
-const PostBlock = () => {
-  const user = useSelector(state => state.user.user.user);
-  const sortedPosts = user.posts.sort((a, b) => {
-    return new Date(b.dateTime) - new Date(a.dateTime);
-  });
-  const posts = sortedPosts.map(post => {
+const PostBlock = (props) => {
+  const posts = sortByDate(props.user.posts).map((post) => {
     return (
       <SinglePost
         key={post._id}
         id={post._id}
-        name={user.firstName + " " + user.lastName}
-        image={user.image}
+        name={props.user.firstName + " " + props.user.lastName}
+        image={props.user.image}
         dateTime={post.dateTime}
         text={post.text}
         postImage={post.image}
@@ -23,7 +19,7 @@ const PostBlock = () => {
   });
   return (
     <div className="postBlock">
-      {posts}
+      {posts.length === 0 ? <p>There is nothing here yet...</p> : posts}
     </div>
   );
 };

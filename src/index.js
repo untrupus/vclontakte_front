@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from "react-redux";
-import {ConnectedRouter} from "connected-react-router";
-import store, {history} from "./store/configureStore";
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "connected-react-router";
+import store, { history } from "./store/configureStore";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import axios from "./axiosApi";
+import "./index.css";
 
-axios.interceptors.request.use(config => {
+/** Create authorization header */
+axios.interceptors.request.use((config) => {
   try {
-    config.headers['Authorization'] = store.getState().user.user.user.token;
-  } catch(e) {
+    config.headers["Authorization"] = store.getState().user.user.user.token;
+  } catch (e) {
     // no token exists
   }
   return config;
@@ -20,10 +21,10 @@ axios.interceptors.request.use(config => {
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App/>
+      <App />
     </ConnectedRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 reportWebVitals();

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
-import {api} from "../../../constants";
-import {deletePost, editPost} from "../../../store/actions/postActions";
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import ScreenShareIcon from '@material-ui/icons/ScreenShare';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { api } from "../../../constants";
+import { deletePost, editPost } from "../../../store/actions/postActions";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import ScreenShareIcon from "@material-ui/icons/ScreenShare";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import EditIcon from '@material-ui/icons/Edit';
+import EditIcon from "@material-ui/icons/Edit";
 import "./PostBlock.css";
 
 const SinglePost = (props) => {
@@ -23,26 +23,34 @@ const SinglePost = (props) => {
   return (
     <div className="singlePost">
       <div className="postHeader">
-        <img src={api + props.image} alt="avatar" className="postAvatar"/>
-        <p className="postHeaderTitle">{props.name}
-          <span className="postDate">  {new Date(props.dateTime).toDateString()}</span></p>
+        <img src={api + props.image} alt="avatar" className="postAvatar" />
+        <p className="postHeaderTitle">
+          {props.name}
+          <span className="postDate">
+            {" "}
+            {new Date(props.dateTime).toDateString()}
+          </span>
+        </p>
         <HighlightOffIcon
           className="removeIcon"
           onClick={() => remove(props.id)}
         />
       </div>
       <p>{props.text}</p>
-      {props.postImage ? <img
-        src={api + props.postImage}
-        alt={props.postImage}
-        className="postImage"/> : null}
+      {props.postImage ? (
+        <img
+          src={api + props.postImage}
+          alt={props.postImage}
+          className="postImage"
+        />
+      ) : null}
       <div className="postFooter">
-        <FavoriteBorderIcon className="postIcon"/>
-        <ChatBubbleOutlineIcon className="postIcon"/>
-        <ScreenShareIcon className="postIcon"/>
-        <EditIcon className="postIcon" onClick={() => setVisible(true)}/>
+        <FavoriteBorderIcon className="postIcon" />
+        <ChatBubbleOutlineIcon className="postIcon" />
+        <ScreenShareIcon className="postIcon" />
+        <EditIcon className="postIcon" onClick={() => setVisible(true)} />
       </div>
-      {visible ?
+      {visible ? (
         <div className="editBlock">
           <input
             type="text"
@@ -53,11 +61,11 @@ const SinglePost = (props) => {
           <button type="button" onClick={() => setVisible(false)}>
             Cancel
           </button>
-          <button type="button" onClick={() => edit(props.id, {text})}>
+          <button type="button" onClick={() => edit(props.id, { text })}>
             Edit
           </button>
         </div>
-        : null}
+      ) : null}
     </div>
   );
 };

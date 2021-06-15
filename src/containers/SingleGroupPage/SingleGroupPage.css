@@ -1,0 +1,16 @@
+.singleGroupPage {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.groupColumnCenter {
+    width: 50%;
+    margin-top: 30px;
+}
+
+.groupColumnLeft {
+    width: 30%;
+    margin-top: 30px;
+}
