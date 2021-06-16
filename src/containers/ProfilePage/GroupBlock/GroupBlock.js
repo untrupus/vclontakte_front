@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../../constants";
 import { sort } from "../../../helpers";
+import PropTypes from "prop-types";
 import "./GroupBlock.css";
 
 const GroupBlock = (props) => {
@@ -29,3 +30,7 @@ const GroupBlock = (props) => {
 };
 
 export default GroupBlock;
+
+GroupBlock.propTypes = {
+  groups: PropTypes.array.isRequired,
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./MyGroupsPage.css";
 
 const SingleGroup = (props) => {
@@ -17,3 +18,10 @@ const SingleGroup = (props) => {
 };
 
 export default SingleGroup;
+
+SingleGroup.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};

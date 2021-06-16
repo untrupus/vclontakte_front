@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSingleGroup } from "../../store/actions/groupActions";
+import PropTypes from "prop-types";
 import SideBar from "../../components/SideBar/SideBar";
 import GroupMainImage from "./GroupMainImage/GroupMainImage";
 import GroupHeader from "./GroupHeader/GroupHeader";
@@ -55,3 +56,11 @@ const SingleGroupPage = (props) => {
 };
 
 export default SingleGroupPage;
+
+SingleGroupPage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
+};

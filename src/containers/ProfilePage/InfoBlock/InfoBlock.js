@@ -4,6 +4,7 @@ import {
   editProfile,
   getUserProfile,
 } from "../../../store/actions/userActions";
+import PropTypes from "prop-types";
 import EditIcon from "@material-ui/icons/Edit";
 import "./InfoBlock.css";
 
@@ -89,3 +90,7 @@ const InfoBlock = ({ userProfile }) => {
 };
 
 export default InfoBlock;
+
+InfoBlock.propTypes = {
+  userProfile: PropTypes.object.isRequired,
+};

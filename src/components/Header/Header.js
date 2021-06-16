@@ -14,14 +14,14 @@ const Header = () => {
   const logout = () => {
     dispatch(logoutUser());
   };
-
+  let link = user ? "/user/" + user._id : "/";
   return (
     <div className="header">
       <div className="headerInner">
-        <div className="headerLogo">
+        <Link className="headerLogo" to={link}>
           <PermContactCalendarIcon className="logoIcon" />
           <h2 className="logo">VCLONTAKTE</h2>
-        </div>
+        </Link>
         {user ? (
           <div className="userInfo">
             <img

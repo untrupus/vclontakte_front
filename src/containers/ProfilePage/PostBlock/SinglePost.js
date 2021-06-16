@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { api } from "../../../constants";
 import { deletePost, editPost } from "../../../store/actions/postActions";
+import PropTypes from "prop-types";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import ScreenShareIcon from "@material-ui/icons/ScreenShare";
@@ -71,3 +72,12 @@ const SinglePost = (props) => {
 };
 
 export default SinglePost;
+
+SinglePost.propTypes = {
+  text: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  dateTime: PropTypes.string.isRequired,
+  postImage: PropTypes.string,
+  id: PropTypes.string.isRequired,
+};

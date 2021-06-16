@@ -1,6 +1,7 @@
 import React from "react";
 import SingleGroupPost from "./SingleGroupPost";
 import { sortByDate } from "../../../helpers";
+import PropTypes from "prop-types";
 import "./GroupPosts.css";
 
 const GroupPosts = (props) => {
@@ -36,3 +37,9 @@ const GroupPosts = (props) => {
 };
 
 export default GroupPosts;
+
+GroupPosts.propTypes = {
+  posts: PropTypes.array.isRequired,
+  id: PropTypes.string.isRequired,
+  permit: PropTypes.bool.isRequired,
+};

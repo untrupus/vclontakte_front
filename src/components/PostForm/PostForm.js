@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
 import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import "./PostForm.css";
@@ -79,3 +80,8 @@ const PostForm = (props) => {
 };
 
 export default PostForm;
+
+PostForm.propTypes = {
+  check: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+};

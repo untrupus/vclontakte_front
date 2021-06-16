@@ -29,7 +29,7 @@ const SideBar = () => {
       <Link className="sideBarLink" to="/mygroups">
         <GroupWorkIcon className="sideBarIcon" /> Groups
       </Link>
-      <Link className="sideBarLink" to="/photo">
+      <Link className="sideBarLink" to={"/photo/" + user._id}>
         <PhotoCameraIcon className="sideBarIcon" /> Photo
       </Link>
       <Link className="sideBarLink" to="/music">

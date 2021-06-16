@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { api } from "../../../constants";
 import { deleteGroupPost } from "../../../store/actions/groupActions";
+import PropTypes from "prop-types";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import ScreenShareIcon from "@material-ui/icons/ScreenShare";
@@ -39,3 +40,12 @@ const SingleGroupPost = (props) => {
 };
 
 export default SingleGroupPost;
+
+SingleGroupPost.propTypes = {
+  dateTime: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  image: PropTypes.string,
+  permit: PropTypes.bool.isRequired,
+  groupId: PropTypes.string.isRequired,
+  postId: PropTypes.string.isRequired,
+};

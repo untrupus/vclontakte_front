@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserProfile } from "../../store/actions/userActions";
 import SideBar from "../../components/SideBar/SideBar";
+import PropTypes from "prop-types";
 import InfoBlock from "./InfoBlock/InfoBlock";
 import PhotoBlock from "./PhotoBlock/PhotoBlock";
 import FriendBlock from "../../components/FriendBlock/FriendBlock";
@@ -31,7 +32,9 @@ const ProfilePage = (props) => {
       </div>
       <div className="columnRight">
         {userProfile && <InfoBlock userProfile={userProfile} />}
-        {userProfile && <PhotoBlock posts={userProfile?.posts} />}
+        {userProfile && (
+          <PhotoBlock posts={userProfile?.posts} id={userProfile?._id} />
+        )}
         {user?._id === userProfile?._id ? <PostForm check={"profile"} /> : null}
         {userProfile && <PostBlock user={userProfile} />}
       </div>
@@ -40,3 +43,11 @@ const ProfilePage = (props) => {
 };
 
 export default ProfilePage;
+
+ProfilePage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
+};
