@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 import Header from "./components/Header/Header";
 import ProfilePage from "./containers/ProfilePage/ProfilePage";
 import Login from "./containers/Login/Login";
@@ -13,7 +15,6 @@ import CreateGroupPage from "./containers/CreateGroupPage/CreateGroupPage";
 import SingleGroupPage from "./containers/SingleGroupPage/SingleGroupPage";
 import Messenger from "./containers/Messenger/Messenger";
 import NewsPage from "./containers/NewsPage/NewsPage";
-import { useSelector } from "react-redux";
 
 const ProtectedRoute = ({ isAllowed, ...props }) => {
   return isAllowed ? <Route {...props} /> : <Redirect to="/" />;
@@ -64,7 +65,7 @@ function App() {
           isAllowed={user}
         />
         <ProtectedRoute
-          path="/photo"
+          path="/photo/:id"
           exact
           component={PhotoPage}
           isAllowed={user}
@@ -107,3 +108,9 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  _id: PropTypes.string.isRequired,
+  user: PropTypes.object,
+  isAllowed: PropTypes.bool.isRequired,
+};

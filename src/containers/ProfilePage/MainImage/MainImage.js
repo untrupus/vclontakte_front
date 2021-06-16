@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addFriend, deleteFriend } from "../../../store/actions/friendActions";
 import { api } from "../../../constants";
 import noImage from "../../../assets/noImage.jpeg";
+import PropTypes from "prop-types";
 import "./MainImage.css";
 import { Link } from "react-router-dom";
 
@@ -64,3 +65,7 @@ const MainImage = (props) => {
 };
 
 export default MainImage;
+
+MainImage.propTypes = {
+  userProfile: PropTypes.object.isRequired,
+};

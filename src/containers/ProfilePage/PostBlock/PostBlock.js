@@ -1,6 +1,7 @@
 import React from "react";
 import SinglePost from "./SinglePost";
 import { sortByDate } from "../../../helpers";
+import PropTypes from "prop-types";
 import "./PostBlock.css";
 
 const PostBlock = (props) => {
@@ -25,3 +26,7 @@ const PostBlock = (props) => {
 };
 
 export default PostBlock;
+
+PostBlock.propTypes = {
+  user: PropTypes.object.isRequired,
+};

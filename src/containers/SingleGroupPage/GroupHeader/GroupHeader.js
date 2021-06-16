@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./GroupHeader.css";
 
 const GroupHeader = (props) => {
@@ -12,3 +13,9 @@ const GroupHeader = (props) => {
 };
 
 export default GroupHeader;
+
+GroupHeader.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+};

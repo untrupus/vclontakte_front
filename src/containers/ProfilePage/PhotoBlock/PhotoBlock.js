@@ -2,6 +2,7 @@ import React from "react";
 import { api } from "../../../constants";
 import { Link } from "react-router-dom";
 import { sortByDate } from "../../../helpers";
+import PropTypes from "prop-types";
 import "./PhotoBlock.css";
 
 const PhotoBlock = (props) => {
@@ -19,7 +20,7 @@ const PhotoBlock = (props) => {
   });
   return (
     <div className="photoBlock">
-      <Link className="photoLink" to="/photo">
+      <Link className="photoLink" to={"/photo/" + props.id}>
         Photos {filterPosts?.length}
       </Link>
       <div className="photos">{photos}</div>
@@ -28,3 +29,8 @@ const PhotoBlock = (props) => {
 };
 
 export default PhotoBlock;
+
+PhotoBlock.propTypes = {
+  posts: PropTypes.array.isRequired,
+  id: PropTypes.string.isRequired,
+};

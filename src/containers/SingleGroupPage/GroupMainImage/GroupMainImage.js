@@ -5,6 +5,7 @@ import {
   leaveGroup,
   deleteGroup,
 } from "../../../store/actions/groupActions";
+import PropTypes from "prop-types";
 import "./GroupMainImage.css";
 import { useDispatch } from "react-redux";
 
@@ -42,3 +43,10 @@ const GroupMainImage = (props) => {
 };
 
 export default GroupMainImage;
+
+GroupMainImage.propTypes = {
+  image: PropTypes.string.isRequired,
+  check: PropTypes.bool.isRequired,
+  remove: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+};

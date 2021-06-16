@@ -2,6 +2,7 @@ import React from "react";
 import { api } from "../../constants";
 import { Link } from "react-router-dom";
 import { sort } from "../../helpers";
+import PropTypes from "prop-types";
 import noImage from "../../assets/noImage.jpeg";
 import "./FriendBlock.css";
 
@@ -35,3 +36,8 @@ const FriendBlock = (props) => {
 };
 
 export default FriendBlock;
+
+FriendBlock.propTypes = {
+  title: PropTypes.string.isRequired,
+  members: PropTypes.array.isRequired,
+};
