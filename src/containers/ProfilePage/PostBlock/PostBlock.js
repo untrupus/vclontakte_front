@@ -10,11 +10,15 @@ const PostBlock = (props) => {
       <SinglePost
         key={post._id}
         id={post._id}
+        userId={props.user._id}
         name={props.user.firstName + " " + props.user.lastName}
         image={props.user.image}
         dateTime={post.dateTime}
         text={post.text}
         postImage={post.image}
+        likes={post.likes}
+        comments={post.comments}
+        repost={post.repostFromUser}
       />
     );
   });

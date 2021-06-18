@@ -106,11 +106,18 @@ function App() {
     </div>
   );
 }
+ProtectedRoute.propTypes = {
+  isAllowed: PropTypes.bool,
+};
+
+ProtectedSignRoute.propTypes = {
+  user: PropTypes.shape({
+    user: PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+    }),
+  }),
+  _id: PropTypes.string,
+  isAllowed: PropTypes.bool,
+};
 
 export default App;
-
-App.propTypes = {
-  _id: PropTypes.string.isRequired,
-  user: PropTypes.object,
-  isAllowed: PropTypes.bool.isRequired,
-};
