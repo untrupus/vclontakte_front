@@ -22,6 +22,11 @@ import {
   ADD_FRIEND_SUCCESS,
   DELETE_FRIEND_FAILURE,
   DELETE_FRIEND_SUCCESS,
+  COMMENT_POST_FAILURE,
+  COMMENT_POST_SUCCESS,
+  LIKE_POST_FAILURE,
+  LIKE_POST_SUCCESS,
+  ADD_REPLY_SUCCESS,
 } from "../actionTypes";
 
 const initialState = {
@@ -38,9 +43,13 @@ const initialState = {
   editPostError: null,
   addFriendError: null,
   deleteFriendError: null,
+  commentPostError: null,
+  likePostError: null,
 };
 
 const userReducer = (state = initialState, action) => {
+  let newUserProfile;
+  let index;
   switch (action.type) {
     case REGISTER_USER_FAILURE:
       return { ...state, registerError: action.error };
@@ -92,6 +101,55 @@ const userReducer = (state = initialState, action) => {
       return { ...state, userProfile: action.data, deleteFriendError: null };
     case DELETE_FRIEND_FAILURE:
       return { ...state, deleteFriendError: action.error };
+    case COMMENT_POST_SUCCESS:
+      newUserProfile = Object.assign({}, state.userProfile);
+      index = newUserProfile.posts.findIndex(
+        (post) => post._id === action.data._id
+      );
+      newUserProfile.posts = [
+        ...newUserProfile.posts.slice(0, index),
+        action.data,
+        ...newUserProfile.posts.slice(index + 1),
+      ];
+      return {
+        ...state,
+        userProfile: newUserProfile,
+        commentPostError: null,
+      };
+    case COMMENT_POST_FAILURE:
+      return { ...state, commentPostError: action.error };
+    case LIKE_POST_FAILURE:
+      return { ...state, likePostError: action.error };
+    case LIKE_POST_SUCCESS:
+      newUserProfile = Object.assign({}, state.userProfile);
+      index = newUserProfile.posts.findIndex(
+        (post) => post._id === action.data._id
+      );
+      newUserProfile.posts = [
+        ...newUserProfile.posts.slice(0, index),
+        action.data,
+        ...newUserProfile.posts.slice(index + 1),
+      ];
+      return {
+        ...state,
+        userProfile: newUserProfile,
+        commentPostError: null,
+      };
+    case ADD_REPLY_SUCCESS:
+      newUserProfile = Object.assign({}, state.userProfile);
+      index = newUserProfile.posts.findIndex(
+        (post) => post._id === action.data._id
+      );
+      newUserProfile.posts = [
+        ...newUserProfile.posts.slice(0, index),
+        action.data,
+        ...newUserProfile.posts.slice(index + 1),
+      ];
+      return {
+        ...state,
+        userProfile: newUserProfile,
+        commentPostError: null,
+      };
     default:
       return { ...state };
   }

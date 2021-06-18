@@ -82,6 +82,6 @@ const PostForm = (props) => {
 export default PostForm;
 
 PostForm.propTypes = {
-  check: PropTypes.bool.isRequired,
-  id: PropTypes.string.isRequired,
+  check: PropTypes.bool,
+  id: PropTypes.string,
 };

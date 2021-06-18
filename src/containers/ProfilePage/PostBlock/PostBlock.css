@@ -27,6 +27,7 @@
     font-size: 12px;
     font-style: italic;
     color: gray;
+    margin-left: 10px;
 }
 
 .postImage {
@@ -35,13 +36,15 @@
 }
 
 .postFooter {
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 1px solid gray;
     margin-top: 10px;
+    display: flex;
 }
 
 .postIcon {
-    margin-right: 30px;
+    margin-left: 30px;
     color: gray;
     cursor: pointer;
 }
@@ -63,4 +66,110 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+.repost {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 30px;
+    border-bottom: 1px solid gray;
+    background-color: #e7e4e4;
+}
+
+.repostFrom {
+    margin-right: 20px;
+    font-style: italic;
+}
+
+.commentsBlock {
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.singleComment {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.commentAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+
+.commentLink {
+    color: cornflowerblue;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.commentHeader span {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    flex-grow: 1;
+}
+
+.singleComment p {
+    margin-left: 20px;
+}
+
+.addReply {
+    display: flex;
+}
+.addReply input {
+    flex-grow: 1;
+}
+
+.replyAvatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.replyHeader {
+    display: flex;
+    align-items: center;
+}
+
+.replyHeader span {
+    font-size: 12px;
+    color: gray
+}
+
+.singleReply {
+    margin: 10px 0 0 30px;
+    border-bottom: 1px solid gray;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.singleReply p {
+    margin: 5px 0 0 40px;
+}
+
+.replyName {
+    font-weight: bold;
+    margin-right: 20px;
+    color: cornflowerblue;
+}
+
+.repliedTo {
+    font-size: 12px;
+    margin-left: 10px;
+    color: gray;
 }
