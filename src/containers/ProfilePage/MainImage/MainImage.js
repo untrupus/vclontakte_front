@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addFriend, deleteFriend } from "../../../store/actions/friendActions";
+import { createChat } from "../../../store/actions/chatActions";
 import { api } from "../../../constants";
 import noImage from "../../../assets/noImage.jpeg";
 import PropTypes from "prop-types";
@@ -43,7 +44,16 @@ const MainImage = (props) => {
       </button>
     );
   }
-
+  const newChat = () => {
+    dispatch(
+      createChat({
+        with: props.userProfile._id,
+        firstName: props.userProfile.firstName,
+        lastName: props.userProfile.lastName,
+        image: props.userProfile.image,
+      })
+    );
+  };
   return (
     <div className="mainImageBlock">
       <img
@@ -60,6 +70,11 @@ const MainImage = (props) => {
       ) : (
         subscribeButton
       )}
+      {user._id !== props.userProfile?._id ? (
+        <button className="linkToEditBtn" type="button" onClick={newChat}>
+          Write Message
+        </button>
+      ) : null}
     </div>
   );
 };

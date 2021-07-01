@@ -27,6 +27,8 @@ import {
   LIKE_POST_FAILURE,
   LIKE_POST_SUCCESS,
   ADD_REPLY_SUCCESS,
+  CREATE_CHAT_WITH,
+  REMOVE_CHAT_WITH,
 } from "../actionTypes";
 
 const initialState = {
@@ -150,6 +152,10 @@ const userReducer = (state = initialState, action) => {
         userProfile: newUserProfile,
         commentPostError: null,
       };
+    case CREATE_CHAT_WITH:
+      return { ...state, user: action.data };
+    case REMOVE_CHAT_WITH:
+      return { ...state, user: action.data };
     default:
       return { ...state };
   }

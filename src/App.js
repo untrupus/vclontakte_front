@@ -13,6 +13,7 @@ import PhotoPage from "./containers/PhotoPage/PhotoPage";
 import MyGroupsPage from "./containers/MyGroupsPage/MyGroupsPage";
 import CreateGroupPage from "./containers/CreateGroupPage/CreateGroupPage";
 import SingleGroupPage from "./containers/SingleGroupPage/SingleGroupPage";
+import EmptyMessenger from "./containers/Messenger/EmptyMessenger";
 import Messenger from "./containers/Messenger/Messenger";
 import NewsPage from "./containers/NewsPage/NewsPage";
 
@@ -90,6 +91,12 @@ function App() {
         />
         <ProtectedRoute
           path="/messenger"
+          exact
+          component={EmptyMessenger}
+          isAllowed={user}
+        />
+        <ProtectedRoute
+          path="/messenger/:id"
           exact
           component={Messenger}
           isAllowed={user}
